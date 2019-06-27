@@ -8,6 +8,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final _formKey = GlobalKey<FormState>();
+  final feedController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -24,16 +25,25 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             TextFormField(
               keyboardType: TextInputType.url,
+              controller: feedController,
               decoration: InputDecoration(
                 labelText: 'Link do RSS'
               ),
+              validator: (value){
+                if(value.isEmpty){
+                  return 'Este campo não pode estar vazio';
+                }
+              },
               ),
               RaisedButton(
                 child: Text('Cadastrar'),
                 color: Colors.amber,
                 textColor: Colors.black,
                 onPressed: () {
-                  print('ok !');
+                  if(_formKey.currentState.validate()){
+                    print(feedController.text);
+                    feedController.text = '';
+                  }
                 },
               )
             ],
