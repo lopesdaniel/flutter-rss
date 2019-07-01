@@ -1,16 +1,10 @@
-# curso_flutter_avancado
+# Aplicativo Leitor de RSS
 
-A new Flutter project.
+Aplicativo realizado no curso da https://www.schoolofnet.com/ de Flutter avançado.
 
-## Getting Started
+## Descrição
 
-This project is a starting point for a Flutter application.
+O aplicativo faz o cadastramento de um link de RSS, e mostra posteriormente a lista das postagens, 
+ao clicar no item da lista, o mesmo é aberto no navegador padrão de seus dispositivo celular.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+- Compatível com Android Lollipop e posteriores.
